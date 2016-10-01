@@ -8,8 +8,9 @@
   <img src="<%= item.path_to_image %>" />
   <p>Размер: <%= item.size %> cm.</p>
   <p>Цена: <%= item.price %> grn.</p>
-  <button type="button" class="btn btn-success" onclick="test(<%= item.id %>);">Заказать</button>
+  <button type="button" class="btn btn-success" onclick="add_to_basket(<%= item.id %>);">Заказать</button>
   </div>
 <% end %>
 </div>
+  <button type="button" class="btn btn-success" onclick="summa();">Количество</button>
 </div>
