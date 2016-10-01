@@ -1,0 +1,15 @@
+<h2>Добро пожаловать в PizzaShop!</h2>
+
+<div class="container-fluid">
+<div class="row">
+<% @products.each do |item| %>
+  <div class="col-md-4">
+  <h3><%= item.title %></h3>
+  <img src="<%= item.path_to_image %>" />
+  <p>Размер: <%= item.size %> cm.</p>
+  <p>Цена: <%= item.price %> grn.</p>
+  <button type="button" class="btn btn-success" onclick="test(<%= item.id %>);">Заказать</button>
+  </div>
+<% end %>
+</div>
+</div>
