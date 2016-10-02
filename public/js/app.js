@@ -4,7 +4,8 @@ var key = 'product_'+id;
 var x = localStorage.getItem(key);
 x = x * 1 + 1;
 localStorage.setItem(key, x);
-alert (x);
+upd_cnt();
+upd_order();
 }
 
 function summa()
@@ -18,7 +19,29 @@ if (key.indexOf("product_") == 0) {
 }
 
 }
-     alert (sum);
+     return sum;
 }
 
+function order()
+{
+var orders ='';
+for (var i = 0; i < localStorage.length; i++){
+var key = localStorage.key(i);
+if (key.indexOf("product_") == 0) {
+     var x = localStorage.getItem(key);
+				   }
+     orders += key+'-'+x+';'
+					     }
+return orders;
+}
+
+
+function upd_cnt() {
+text = 'Корзина ('+ summa()+')';
+$("#basket").text(text);
+};
+
+function upd_order() {
+$('#order').val(order());
+};
 

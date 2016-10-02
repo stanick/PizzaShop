@@ -1,5 +1,4 @@
 <h2>Добро пожаловать в PizzaShop!</h2>
-
 <div class="container-fluid">
 <div class="row">
 <% @products.each do |item| %>
@@ -11,6 +10,13 @@
   <button type="button" class="btn btn-success" onclick="add_to_basket(<%= item.id %>);">Заказать</button>
   </div>
 <% end %>
+</div><br/>
+  <button type="button" class="btn btn-success" onclick="localStorage.clear();">Количество</button>
 </div>
-  <button type="button" class="btn btn-success" onclick="summa();">Количество</button>
-</div>
+
+<script type="text/javascript">
+$(function(){
+upd_cnt();
+upd_order();
+});
+</script>
