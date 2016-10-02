@@ -30,7 +30,7 @@ var key = localStorage.key(i);
 if (key.indexOf("product_") == 0) {
      var x = localStorage.getItem(key);
 				   }
-     orders += key+'-'+x+';'
+     orders += key+'-'+x+',';
 					     }
 return orders;
 }
