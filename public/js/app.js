@@ -45,3 +45,9 @@ function upd_order() {
 $('#order').val(order());
 };
 
+function del_orders() {
+localStorage.clear();
+upd_cnt();
+upd_order();
+$('#hidden').text("Ваша корзина пуста!")
+}

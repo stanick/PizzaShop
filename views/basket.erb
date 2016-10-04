@@ -1,5 +1,6 @@
-<h2>Список заказов:</h2>
+<div id="hidden">
 
+<h2>Список заказов:</h2>
 <table class = 'table table-striped'>
 <thead>
 	<tr>
@@ -36,3 +37,24 @@
 </tbody>
 
 </table>
+
+<form action = "/place_orders" method = "POST" >
+  <div class="form-group">
+   <input name = "order[orders]" type = "hidden" value = "<%= @orders_input %>">
+      <label>Имя</label>
+    <input type="text" class="form-control" name="order[username]" placeholder="Введите ваше имя" >
+  </div>
+  <div class="form-group">
+    <label>Телефон</label>
+    <input type="text" class="form-control" name="order[phone]" placeholder="Ваш телефон" >
+  </div>
+  <div class="form-group">
+    <label>Адрес доставки</label>
+    <textarea  name="order[address]" type="text" class="form-control" placeholder="Введите адрес доставки" ></textarea>
+  </div>
+
+  <button type="submit" class="btn btn-success" >Заказать</button>
+  <input type="button" class="btn btn-danger" value = "Отменить" onclick = "del_orders();">
+
+</form>
+</div>
