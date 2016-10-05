@@ -1,0 +1,25 @@
+<h2>Список заказов:<//h2>
+
+<table class = 'table table-striped'>
+<thead>
+	<tr>
+	<th>Имя</th>
+	<th>Телефон</th>
+	<th>Адрес</th>
+	</tr>
+</thead>
+<tbody>
+
+<% @orders_all.each do |order| %>
+	<tr>
+	<td><%= order.username %></td>
+	<td><%= order.phone %></td>
+	<td><%= order.address %></td>
+	</tr>
+
+
+<% end%>
+
+</tbody>
+
+</table>

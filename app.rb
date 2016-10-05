@@ -50,6 +50,11 @@ post '/place_orders' do
 
 end
 
+get '/admin' do
+@orders_all = Order.order('created_at DESC')
+erb :admin
+end
+
 def parse_orders orders  
 arr2=[]
 orders = orders.split(',') 
